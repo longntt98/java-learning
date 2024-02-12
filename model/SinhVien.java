@@ -1,4 +1,4 @@
-package management.list;
+package model;
 
 public class SinhVien {
 	private String maSinhVien, hoVaTen;

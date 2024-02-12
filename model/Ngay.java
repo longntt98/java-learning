@@ -1,4 +1,4 @@
-package management.list;
+package model;
 
 public class Ngay {
 	private int ngay, thang, nam;

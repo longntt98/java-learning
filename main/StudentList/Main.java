@@ -1,15 +1,12 @@
-package management.test;
+package main.StudentList;
 
 import java.util.Scanner;
 
-import management.main.DanhSachSinhVien;
-import management.main.SinhVien;
-
-public class Test {
+public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        DanhSachSinhVien dssv = new DanhSachSinhVien();
+        StudentList dssv = new StudentList();
         int luaChon = 0;
         do {
             System.out.println("MENU ---------- ");
@@ -38,7 +35,7 @@ public class Test {
                 int namSinh = sc.nextInt();
                 System.out.println("Nhập điểm trung bình: ");
                 float diemTrungBinh = sc.nextFloat();
-                SinhVien sv = new SinhVien(maSinhVien, hoVaTen, namSinh, diemTrungBinh);
+                Student sv = new Student(maSinhVien, hoVaTen, namSinh, diemTrungBinh);
                 dssv.themSinhVien(sv);
 
             } else if (luaChon == 2) {
@@ -59,13 +56,13 @@ public class Test {
                 // viên.
                 System.out.println("Nhập mã sinh viên: ");
                 String maSinhVien = sc.nextLine();
-                SinhVien sv = new SinhVien(maSinhVien);
+                Student sv = new Student(maSinhVien);
                 System.out.println("Kiếm tra sinh viên có trong danh sách: " + dssv.kiemTraTonTai(sv));
             } else if (luaChon == 7) {
                 // 7. Xóa một sinh viên ra khỏi danh sách dựa trên mã sinh viên.
                 System.out.println("Nhập mã sinh viên: ");
                 String maSinhVien = sc.nextLine();
-                SinhVien sv = new SinhVien(maSinhVien);
+                Student sv = new Student(maSinhVien);
                 System.out.println("Xóa sinh viên trong danh sách: " + dssv.xoaSinhVien(sv));
             } else if (luaChon == 8) {
                 // 8. Tìm kiếm tất cả sinh viên dựa trên Tên được nhập từ bàn phím.

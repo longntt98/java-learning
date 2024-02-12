@@ -1,18 +1,18 @@
-package management.main;
+package main.StudentList;
 
 import java.util.Objects;
 
-public class SinhVien implements Comparable<SinhVien> {
+public class Student implements Comparable<Student> {
     private String maSinhVien;
     private String hoVaTen;
     private int namSinh;
     private float diemTrungBinh;
 
-    public SinhVien(String maSinhVien) {
+    public Student(String maSinhVien) {
         this.maSinhVien = maSinhVien;
     }
 
-    public SinhVien(String maSinhVien, String hoVaTen, int namSinh, float diemTrungBinh) {
+    public Student(String maSinhVien, String hoVaTen, int namSinh, float diemTrungBinh) {
         this.maSinhVien = maSinhVien;
         this.hoVaTen = hoVaTen;
         this.namSinh = namSinh;
@@ -58,7 +58,7 @@ public class SinhVien implements Comparable<SinhVien> {
     }
 
     @Override
-    public int compareTo(SinhVien o) {
+    public int compareTo(Student o) {
         return this.maSinhVien.compareTo(o.maSinhVien);
     }
 
@@ -75,7 +75,7 @@ public class SinhVien implements Comparable<SinhVien> {
             return false;
         if (getClass() != obj.getClass())
             return false;
-        SinhVien other = (SinhVien) obj;
+        Student other = (Student) obj;
         return Objects.equals(maSinhVien, other.maSinhVien);
     }
 
